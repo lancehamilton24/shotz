@@ -15,18 +15,7 @@ const movieBuilder = movieArray => {
 </div>
         `;
   });
-  // Write to the available div
   $("#movieTitle").append(domString);
-  // bindEvents();
 };
 
-$.get("../db/movie.json")
-  .done(data => {
-    console.log(data);
-    movieBuilder(data.movies);
-  })
-  .fail(error => {
-    console.error(error);
-  });
-
-// export { movieBuilder };
+export { movieBuilder };

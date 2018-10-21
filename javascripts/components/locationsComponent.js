@@ -19,11 +19,4 @@ const locationBuilder = locationArray => {
   // bindEvents();
 };
 
-$.get("../db/locations.json")
-  .done(data => {
-    console.log(data);
-    locationBuilder(data.locations);
-  })
-  .fail(error => {
-    console.error(error);
-  });
+export { locationBuilder };
