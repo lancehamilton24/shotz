@@ -1,19 +1,25 @@
-$("#morning").on("click", e => {
-  e.preventDefault();
-  console.log("morning");
-});
+// import { sortLocations } from "./components/locationsComponent.js";
 
-$("#afternoon").on("click", e => {
-  e.preventDefault();
-  console.log("afternoon");
-});
+// const sortEvents = () => {
+//   $("#morningButton").on("click", sortLocations, e => {
+//     e.preventDefault();
 
-$("#evening").on("click", e => {
-  e.preventDefault();
-  console.log("evening");
-});
+//   });
 
-$("#dark").on("click", e => {
-  e.preventDefault();
-  console.log("After dark");
-});
+//   $("#afternoonButton").on("click", e => {
+//     e.preventDefault();
+//     console.log("afternoon");
+//   });
+
+//   $("#eveningButton").on("click", e => {
+//     e.preventDefault();
+//     console.log("evening");
+//   });
+
+//   $("#darkButton").on("click", e => {
+//     e.preventDefault();
+//     console.log("After dark");
+//   });
+// };
+
+// sortEvents();
