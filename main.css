@@ -9,7 +9,23 @@ body {
   margin: 0 auto;
 }
 
-.movie-card {
+/* .movie-card {
   height: 20rem;
   width: 50%;
+  margin: 20px;
+  padding: 20px;
+} */
+
+#movieTitle {
+  display: flex;
+  width: 100%;
+  margin: 20px;
+  padding: 20px;
+}
+
+#shotLocations {
+  display: flex;
+  flex-direction: row;
+  margin: 10px;
+  padding: 10px;
 }
