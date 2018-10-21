@@ -4,7 +4,6 @@ const movieBuilder = movieArray => {
     domString += `
     <div class="col-md movie-card" id="movies">
     <div class="card">
-     <img class="card-img-top" src="${movie.movieImage}" alt="">
       <div class="card-body">
          <h2 class="card-title">${movie.name}</h2>
          <h4>${movie.genre}</h4>

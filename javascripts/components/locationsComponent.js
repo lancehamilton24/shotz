@@ -2,10 +2,10 @@ const locationBuilder = locationArray => {
   let domString = "";
   locationArray.forEach(location => {
     domString += `
-      <div class="col-md-3 location-card" id="locations">
+      <div class="col-sm-4 location-card" id="locations">
       <div class="card">
        <img class="card-img-top" src="${location.locationImage}" alt="">
-        <div class="card-body">
+        <div class="locations-body">
            <h2 class="card-title">${location.name}</h2>
            <h4>${location.locationAddress}</h4>
           <p>${location.time}</p>
