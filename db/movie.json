@@ -1,0 +1,11 @@
+{
+  "movies": [
+    {
+      "name": "Rush Hour 2",
+      "genre": "Comedy",
+      "releaseDate": "August 3, 2001",
+      "movieImage": "https://images-na.ssl-images-amazon.com/images/I/91tyMCL-yEL._RI_SX200_.jpg",
+      "description": "The perfect combination of comedy, action and drama. Most would call it the best movie ever made."
+    }
+  ]
+}
