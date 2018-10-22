@@ -1,13 +1,32 @@
-import { movieBuilder } from "../components/movieComponent.js";
+// import { movieBuilder } from "../components/movieComponent.js";
 
-let filmLocations = [];
+let locations = [];
 
 const setLocations = newArray => {
-  filmLocations = newArray;
+  locations = newArray;
 };
 
 const showLocations = () => {
-  return filmLocations;
+  return locations;
+};
+
+const sortLocations = e => {
+  const time = e.target.id;
+  if (time === "morning") {
+    locationBuilder(locations);
+  }
+  if (time === "afternoon") {
+    const filteredPets = locations.filter(x => x.time === time);
+    locationBuilder(filteredPets);
+  }
+  if (time === "evening") {
+    const filteredPets = locations.filter(x => x.time === time);
+    locationBuilder(filteredPets);
+  }
+  if (time === "after dark") {
+    const filteredPets = locations.filter(x => x.time === time);
+    locationBuilder(filteredPets);
+  }
 };
 
 const locationBuilder = locationArray => {
@@ -31,42 +50,4 @@ const locationBuilder = locationArray => {
   // bindEvents();
 };
 
-const sortLocations = e => {
-  const time = e.target.id;
-  if (time === "morning") {
-    const filteredLocations = locations.filter(x => x.time === time);
-    console.log(filteredLocations);
-    locationBuilder(filteredLocations);
-  }
-  if (time === "afternoon") {
-    const filteredLocations = locations.filter(x => x.time === time);
-    locationBuilder(filteredLocations);
-  }
-  if (time === "evening") {
-    const filteredLocations = locations.filter(x => x.time === time);
-    locationBuilder(filteredLocations);
-  }
-  if (time === "after dark") {
-    const filteredLocations = locations.filter(x => x.time === time);
-    locationBuilder(filteredLocations);
-  }
-};
-
-$("#morningButton").on("click", e => {
-  e.preventDefault();
-  sortLocations;
-  // sortLocations();
-});
-
-$.get("../db/locations.json")
-  .done(data => {
-    data = jQuery.parseJSON(this.responseText);
-    console.log(data);
-    setLocations(data.locations);
-    locationsBuilder(showLocations());
-  })
-  .fail(error => {
-    console.error(error);
-  });
-
-export { locationBuilder };
+export { locationBuilder, setLocations, showLocations, sortLocations };
