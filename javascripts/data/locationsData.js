@@ -1,9 +1,14 @@
-import { locationBuilder } from "../components/locationsComponent.js";
+import {
+  locationBuilder,
+  setLocations,
+  showLocations
+} from "../components/locationsComponent.js";
 
 $.get("../db/locations.json")
   .done(data => {
     console.log(data);
-    locationBuilder(data.locations);
+    setLocations(data.locations);
+    locationBuilder(showLocations());
   })
   .fail(error => {
     console.error(error);

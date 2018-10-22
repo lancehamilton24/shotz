@@ -1,3 +1,34 @@
+// import { movieBuilder } from "../components/movieComponent.js";
+
+let locations = [];
+
+const setLocations = newArray => {
+  locations = newArray;
+};
+
+const showLocations = () => {
+  return locations;
+};
+
+const sortLocations = e => {
+  const time = e.target.id;
+  if (time === "morning") {
+    locationBuilder(locations);
+  }
+  if (time === "afternoon") {
+    const filteredPets = locations.filter(x => x.time === time);
+    locationBuilder(filteredPets);
+  }
+  if (time === "evening") {
+    const filteredPets = locations.filter(x => x.time === time);
+    locationBuilder(filteredPets);
+  }
+  if (time === "after dark") {
+    const filteredPets = locations.filter(x => x.time === time);
+    locationBuilder(filteredPets);
+  }
+};
+
 const locationBuilder = locationArray => {
   let domString = "";
   locationArray.forEach(location => {
@@ -8,7 +39,7 @@ const locationBuilder = locationArray => {
         <div class="locations-body">
            <h2 class="card-title">${location.name}</h2>
            <h4>${location.locationAddress}</h4>
-          <p>${location.time}</p>
+          <p class="time">${location.time}</p>
       </div>
     </div>
   </div>
@@ -19,4 +50,4 @@ const locationBuilder = locationArray => {
   // bindEvents();
 };
 
-export { locationBuilder };
+export { locationBuilder, setLocations, showLocations, sortLocations };
